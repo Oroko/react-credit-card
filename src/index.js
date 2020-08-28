@@ -1,17 +1,40 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+// import react
+// import react dom
+// component
+
+import React from "react";
+import PropTypes from 'prop-types'
+import ReactDOM from "react-dom";
+import './index.css'
+
+const AddressLabel = ({info}) => {
+  return (
+    <div className="address-label">
+    <p>{info.fullName}</p>
+    <p>{info.streetAddress}</p>
+    <p>{info.zipCode}</p>
+    
+    </div>
+  )
+}
+
+const person = {
+  fullName: "Abel Gechure",
+  streetAddress: "1117 Birch Lane" ,
+  zipCode: "Phillipsburg, NJ 08865 "
+}
+
+AddressLabel.propTypes = {
+  info:PropTypes.shape({
+    fullName: PropTypes.string.isRequired,
+    streetAddress: PropTypes.string.isRequired,
+    zipCode: PropTypes.string.isRequired
+  })
+
+}
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+  <AddressLabel info={person} />,
+  document.querySelector("#root")
+)
