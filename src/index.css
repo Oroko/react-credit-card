@@ -1,13 +1,69 @@
 *{
-  margin: 0;
-  box-sizing: border-box;
+  margin: 20px;
+  
 }
 
-.address-label{
-  background-color: #ccc;
-  max-width: 200px;
-  margin: 20px;
-  padding: 10px;
-  line-height: 1.4em;
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
 
+.credit-card{
+  
+  background-color: #2f3f98;
+  width: 324px;
+  height: 204px;
+  color: #fff;
+  border-radius: 13px;
+  margin: 200px auto;
+  position: relative;
+  
+  
+  
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  
+}
+
+.bank-name, .card-number, .bank, .first-four-digits, .expiration{
+  font-family: "Courier", monospace;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.bank-name{
+  bottom: 0px;
+  font-size: 20px;
+}
+
+.card-number{
+  bottom:60px ;
+  font-size: 24px;
+}
+
+.bank{
+  top: 0px;
+  right: 0px;
+}
+
+.first-four-digits{
+  bottom: 45px;
+  font-size: 13px;
+  font-weight: 200;
+  font-family: sans-serif;
+}
+
+.valid-thru{
+  width: 30px;
+  display: inline-block;
+  font-size: 10px;
+  text-transform: uppercase;
+  
+}
+
+.expiration{
+  bottom: 10px;
+  font-size: 20px;
+  left: 50px;
+  
 }
